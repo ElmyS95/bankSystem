@@ -1,17 +1,11 @@
-//
 //  Customer.swift
-//  Project
-//
-//  Created by Elmy on 01/11/20.
-//  Copyright © 2020 WAC. All rights reserved.
-//
+//  SwiftBankingSystem
 
 import Foundation
 
-// class Customer
 class Customer {
     
-    var customerNo:Int
+    var customerNo:Int64
     var customerName:String
     var customerAddress:String
     var customerGender:String
@@ -19,7 +13,7 @@ class Customer {
     var customerEmail:String
     var customerDOB:String
     
-    init(no:Int, name:String, address:String, gender:String, phone:String, email:String, dob:String) {
+    init(no:Int64, name:String, address:String, gender:String, phone:String, email:String, dob:String) {
         self.customerName = name
         self.customerAddress = address
         self.customerGender = gender
