@@ -13,8 +13,8 @@ func main() {
     
     while (true) {
         print("Choose from below for banking:")
-        print("1. Create Customer")
-        print("2. Create Acoount")
+        print("1. Create/View or Update Customer")
+        print("2. Create Account")
         print("3. Do Transactions")
         print("0. Exit")
         let type = Int(readLine()!)!
