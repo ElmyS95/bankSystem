@@ -29,7 +29,7 @@ class Customer {
     }
     
     func printCustomer() {
-        print("Customer No:\(self.customerNo)\tCustomer Name:\(self.customerName)\tCustomer Address:\(self.customerAddress)\tCustomer Gender:\(self.customerGender)\tCustomer Phone:\(self.customerPhone)\tCustomer Email:\(self.customerEmail)\tCustomer DOB:\(self.customerDOB)")
+        print("Customer No: \(self.customerNo)\nCustomer Name: \(self.customerName)\nCustomer Address: \(self.customerAddress)\nCustomer Gender: \(self.customerGender)\nCustomer Phone: \(self.customerPhone)\nCustomer Email: \(self.customerEmail)\nCustomer DOB: \(self.customerDOB)")
     }
     
 }

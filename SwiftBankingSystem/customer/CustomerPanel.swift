@@ -16,8 +16,9 @@ class CustomerPanel{
         fileURL = URL(fileURLWithPath: "CustomerData", relativeTo: directoryURL).appendingPathExtension("txt")
     }
     
-    // function to select the
+    // initial option method
     func main() {
+        print("\n Customer Panel\n")
         customers = [Customer]()
         readingFromFile()
         while(true) {
@@ -50,6 +51,7 @@ class CustomerPanel{
         return lastCustomerNum
     }
     
+    // function to read from file
     func readingFromFile(){
         do {
             let savedData = try Data(contentsOf: fileURL)
@@ -71,7 +73,7 @@ class CustomerPanel{
         }
     }
     
-    //readind form keyboard and fill the customer array
+    // reading from keyboard and fill the customer array
     func filling(){
         print("Enter customer name")
         let name = readLine()!
@@ -89,10 +91,10 @@ class CustomerPanel{
         let obj = Customer(no: num, name: name, address: address, gender: gender, phone: phone, email: email, dob: dob)
         customers.append(obj)
         preference.customerNum = lastCustomerNum
-        print("Customber No is:" + "\(num)")
+        print("Customer is created successfully. Customber No is:" + "\(num)")
     }
     
-    //function to save data to a file
+    // function to save data to a file
     func savingData() {
         
         var myString:String = ""
@@ -104,13 +106,13 @@ class CustomerPanel{
         do {
             
             try data?.write(to: fileURL)
-            print("Created customer successfully")
         } catch {
             
             print(error.localizedDescription)
         }
     }
     
+    // function to view or update customer
     func viewOrUpdateCustomer() {
         print("Choose \n1: View\n2: Update");
         let choice = Int(readLine()!)!
@@ -154,7 +156,7 @@ class CustomerPanel{
         }
     }
     
-    // update customer
+    // update customer data
     func updateCustomer(num:Int, new:String, option: Int) {
         let customer = searchByNum(no: num)
         if option == 1 {
@@ -169,6 +171,7 @@ class CustomerPanel{
         savingDataToCustomer()
     }
     
+    // search customer
     func searchByNum(no:Int) -> Customer? {
         for cust in customers {
             if cust.customerNo == no {
@@ -189,6 +192,7 @@ class CustomerPanel{
         do {
             
             try data?.write(to: fileURL)
+            print("Customer data is updated")
         } catch {
             
             print(error.localizedDescription)
